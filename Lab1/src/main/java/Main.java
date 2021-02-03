@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-public class MainClass extends JFrame {
+public class Main extends JFrame {
     JFrame frame;
 
     JSlider slider;
@@ -164,7 +164,7 @@ public class MainClass extends JFrame {
     }
 
 
-    public MainClass() {
+    public Main() {
         initSlider();
         initButtons();
         initLayouts();
@@ -174,6 +174,6 @@ public class MainClass extends JFrame {
     }
 
     public static void main(String[] args) {
-        MainClass mc = new MainClass();
+        Main mc = new Main();
     }
 }
