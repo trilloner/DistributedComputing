@@ -21,5 +21,6 @@ public class Main {
         ForkJoinPool pool = new ForkJoinPool(MONASTERY);
         winner.append(pool.invoke(new Arena(firstMonks, secondMonks, 0, MONKS - 1)));
         System.out.println(new String(winner));
+
     }
 }

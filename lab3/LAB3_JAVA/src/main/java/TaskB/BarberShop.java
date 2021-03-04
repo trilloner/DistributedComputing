@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 import static java.lang.Thread.sleep;
 
-public class BarberShop implements Runnable {
+public class BarberShop implements Runnable  {
     private final Semaphore waitingChairs = new Semaphore(3, true);
     private final Semaphore barberChair = new Semaphore(1);
     Barber barber;
@@ -45,12 +45,10 @@ public class BarberShop implements Runnable {
                     Thread.currentThread().interrupt();
                 }
             } else {
-                System.out.println(barberChair.availablePermits());
-
-                if (barberChair.tryAcquire()){
-                    System.out.println(barberChair.availablePermits());
-                    isSleeping = true;}
-                else {
+                //if barber free - sleeping
+                if (barberChair.tryAcquire()) {
+                    isSleeping = true;
+                } else {
                     System.out.println("The barber is cutting hair");
                     barberChair.release();
                 }
@@ -75,8 +73,10 @@ public class BarberShop implements Runnable {
 
         @Override
         public void run() {
+            //free chairs
             if (waitingChairs.tryAcquire()) {
                 System.out.println("Client " + id + " waiting");
+                //check if he sleep and seat free
                 while (!barberChair.tryAcquire()) {
                     barber.wakeUp();
                 }

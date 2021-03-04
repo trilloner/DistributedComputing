@@ -1,5 +1,7 @@
 package TaskA;
 
+import java.util.Collections;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Semaphore;
 
 public class Main {
@@ -10,11 +12,12 @@ public class Main {
         Honey honey = new Honey(10);
         Bear bear = new Bear(honey);
         new Thread(bear).start();
-        new Thread(new Bee(honey,bear)).start();
-        new Thread(new Bee(honey,bear)).start();
-        new Thread(new Bee(honey,bear)).start();
-        new Thread(new Bee(honey,bear)).start();
-        new Thread(new Bee(honey,bear)).start();
+        new Thread(new Bee(honey, bear)).start();
+        new Thread(new Bee(honey, bear)).start();
+        new Thread(new Bee(honey, bear)).start();
+        new Thread(new Bee(honey, bear)).start();
+        new Thread(new Bee(honey, bear)).start();
+        ConcurrentHashMap map = new ConcurrentHashMap();
 
     }
 }

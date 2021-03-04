@@ -1,5 +1,6 @@
 package TaskC;
 
+import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
 
@@ -37,4 +38,7 @@ public class Monk implements Supplier<Monk> {
     public Monk get() {
         return this;
     }
+
+    List<Integer> a;
+
 }

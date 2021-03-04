@@ -20,10 +20,10 @@ public class Bear implements Runnable {
     public void run() {
         while (true) {
             synchronized (this) {
-                while (!isAwake){
+                while (!isAwake) {
                     try {
                         wait();
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
                 }
