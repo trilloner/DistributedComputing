@@ -69,7 +69,7 @@ public class GamePanel extends Canvas implements Runnable {
             for (Bird bird : birds) {
                 for (Bullet bullet : hunter.bullets) {
                     if (bird.getBound().intersects(bullet.getBound())) {
-                        System.out.println("INTERSECT");
+
                         birds.remove(bird);
                         bird.birdDead();
                         hunter.removeBullet();
@@ -86,7 +86,6 @@ public class GamePanel extends Canvas implements Runnable {
     public void run() {
         init();
         while (true) {
-
             long startTime = System.currentTimeMillis();
             renderGame();
 

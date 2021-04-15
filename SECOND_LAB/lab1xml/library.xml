@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library>
+    <author code="12" name="ZHIZA">
+        <book genre="Triller" name="HOW TO DEFENSE COURSE WORK?" year="1999"/>
+        <book genre="Comedy" name="OMG" year="2000"/>
+    </author>
+    <author code="1" name="Jou">
+        <book genre="horror" name="PI IS GOOD?" year="1994"/>
+        <book genre="horror" name="WHO AM I" year="1996"/>
+        <book genre="horror" name="DIPLOM" year="1998"/>
+        <book genre="horror" name="Lok" year="1869"/>
+    </author>
+    <author code="124" name="Posner"/>
+</library>
